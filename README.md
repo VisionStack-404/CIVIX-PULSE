@@ -197,6 +197,6 @@ npm run dev
 
 ---
 ### 👨‍💻 Built By
-**Ramakotesh Ramulapenta** 📧 ramakoteshramulapenta@gmail.com
+**Visionstack-404** 📧 varunvadlakonda4@gmail.com
 
 *Built with ❤️ for a better, automated future. (SDG 9 & SDG 11)*
