@@ -12,7 +12,7 @@ from groq import AsyncGroq
 import traceback
 import base64
 
-# --- 🚀 OPEN SOURCE CLUSTERING LIBRARIES ---
+
 from sentence_transformers import SentenceTransformer
 import imagehash
 from PIL import Image
@@ -20,7 +20,7 @@ from PIL import Image
 import os
 from dotenv import load_dotenv
 
-# Load the hidden keys from the .env file
+
 load_dotenv(override=True)
 
 # ==========================================
@@ -36,7 +36,6 @@ GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
 groq_client = AsyncGroq(api_key=GROQ_API_KEY, timeout=25.0)
 
-# 🔥 MODELS 🔥
 GROQ_MODEL = "llama-3.3-70b-versatile"
 VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct" 
 
@@ -49,9 +48,9 @@ print("Loading Local Embedding Model... (This takes a few seconds)")
 embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 print("Model Loaded! System Ready.")
 
-# ==========================================
+
 # 🛡️ TITANIUM NETWORK & TELEGRAM WRAPPER
-# ==========================================
+
 async def safe_request(method, url, retries=3, **kwargs):
     for attempt in range(retries):
         try:
@@ -79,9 +78,8 @@ async def get_telegram_image_bytes(file_id):
     res2 = await safe_request("GET", f"https://api.telegram.org/file/bot{TELEGRAM_TOKEN}/{file_path}")
     return res2.content if res2 and res2.status_code == 200 else None
 
-# ==========================================
 # 🎤 AGENT 0: SPEECH-TO-TEXT (GROQ WHISPER)
-# ==========================================
+
 async def transcribe_voice(file_id):
     print("🎤 Transcribing Audio via Groq Whisper...")
     res1 = await safe_request("GET", f"{TELEGRAM_API_URL}/getFile?file_id={file_id}")
@@ -101,9 +99,9 @@ async def transcribe_voice(file_id):
         print(f"❌ Whisper Error: {e}")
         return None
 
-# ==========================================
+
 # 👁️ AGENT 4: VISUAL AUDITOR (OCR & DEEPFAKE)
-# ==========================================
+
 async def agent_visual_auditor(image_bytes, complaint_text):
     print("👁️ AGENT 4 (Groq Vision): Auditing Image Relevance & Authenticity...")
     
