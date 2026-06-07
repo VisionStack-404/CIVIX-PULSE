@@ -197,7 +197,7 @@ npm run dev
 
 ---
 ### 👨‍💻 Built By
-**Visionstack-404** 📧 varunvadlakonda4@gmail.com,
+**VisionStack-404** 📧 varunvadlakonda4@gmail.com,
 **ScriptOrbit-132** 📧 srivarshiniyadav30@gmail.com
 
 *Built with ❤️ for a better, automated future. (SDG 9 & SDG 11)*
