@@ -12,7 +12,7 @@ try:
         messages=[{"role": "user", "content": "test"}],
         model="llama-3.3-70b-versatile"
     )
-    print("✅ Success! Key is valid!")
+    print("Success! Key is valid!")
     print(res.choices[0].message.content)
 except Exception as e:
     print(f"❌ Failed: {e}")
