@@ -24,7 +24,7 @@ from dotenv import load_dotenv
 load_dotenv(override=True)
 
 
-# 🛑 CONFIGURATION (SECURED) 🛑
+
 # ==========================================
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 SUPABASE_URL = os.getenv("SUPABASE_URL")
