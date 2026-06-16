@@ -49,7 +49,7 @@ embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
 print("Model Loaded! System Ready.")
 
 
-# 🛡️ TITANIUM NETWORK & TELEGRAM WRAPPER
+
 
 async def safe_request(method, url, retries=3, **kwargs):
     for attempt in range(retries):
