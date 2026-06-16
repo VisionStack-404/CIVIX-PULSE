@@ -100,7 +100,7 @@ async def transcribe_voice(file_id):
         return None
 
 
-# 👁️ AGENT 4: VISUAL AUDITOR (OCR & DEEPFAKE)
+
 
 async def agent_visual_auditor(image_bytes, complaint_text):
     print("👁️ AGENT 4 (Groq Vision): Auditing Image Relevance & Authenticity...")
