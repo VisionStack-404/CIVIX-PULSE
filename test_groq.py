@@ -15,4 +15,4 @@ try:
     print("Success! Key is valid!")
     print(res.choices[0].message.content)
 except Exception as e:
-    print(f"❌ Failed: {e}")
+    print(f"Failed: {e}")
