@@ -27,6 +27,6 @@ try:
     res2 = httpx.patch(f"{url}/rest/v1/grievances?status=eq.Merged", headers=headers, json=payload)
     print(f"Merged grievances assignment status: {res2.status_code}")
     
-    print("✅ Done! Checked and updated in Supabase.")
+    print("Done! Checked and updated in Supabase.")
 except Exception as e:
-    print(f"❌ Error updating database: {e}")
+    print(f"Error updating database: {e}")
