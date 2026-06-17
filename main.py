@@ -215,9 +215,9 @@ async def agent_triage(complaint_text, ocr_text=""):
         print(f"❌ Groq Triage Error: {e}")
         return {"is_legit": True, "category": "Other", "priority_level": "HIGH", "cluster_tag": "issue"}
 
-# ==========================================
+
 # 🧠 DETERMINISTIC 3-LAYER CLUSTERING ENGINE (ARMORED)
-# ==========================================
+
 async def run_clustering_pipeline(lat, lng, complaint_text, file_id, db_headers):
     print("\n🔍 Running 3-Layer Clustering Pipeline (Supabase RPC)...")
     query_embedding = []
