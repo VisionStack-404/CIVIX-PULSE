@@ -78,7 +78,7 @@ async def get_telegram_image_bytes(file_id):
     res2 = await safe_request("GET", f"https://api.telegram.org/file/bot{TELEGRAM_TOKEN}/{file_path}")
     return res2.content if res2 and res2.status_code == 200 else None
 
-# 🎤 AGENT 0: SPEECH-TO-TEXT (GROQ WHISPER)
+
 
 async def transcribe_voice(file_id):
     print("🎤 Transcribing Audio via Groq Whisper...")
@@ -121,7 +121,7 @@ async def agent_visual_auditor(image_bytes, complaint_text):
     You are a strict municipal image verifier. 
     1. Check if the image clearly matches this complaint: "{complaint_text}".
     2. Check if the image looks like a real photo, or if it looks AI-generated/fake.
-    3. Extract any readable text (OCR) from signs/buildings in the photo.
+    3. Extract any readable text (OCR) from signs/buildings in the photo."""
     
     Output strictly JSON:
     {{
@@ -191,7 +191,7 @@ async def agent_triage(complaint_text, ocr_text=""):
     - Total Score 50-79: HIGH
     - Total Score < 50: LOW
 
-    Strictly choose a category: Water, Electricity, Roads, Sanitation, Public_Safety, Other.
+    Strictly choose a category: Water, Electricity, Roads, Sanitation, Public_Safety, Other."""
 
     Output strictly JSON:
     {{
