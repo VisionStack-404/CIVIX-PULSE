@@ -69,7 +69,7 @@ async def send_message(chat_id, text):
     
     res = await safe_request("POST", f"{TELEGRAM_API_URL}/sendMessage", json={"chat_id": str(chat_id), "text": str(text)})
     if res and res.status_code != 200:
-        print(f"❌ Telegram API Error on Chat {chat_id}: {res.text}")
+        print(f" Telegram API Error on Chat {chat_id}: {res.text}")
     return res
 
 async def get_telegram_image_bytes(file_id):
@@ -121,7 +121,7 @@ async def agent_visual_auditor(image_bytes, complaint_text):
     prompt = f"""
     You are a strict municipal image verifier. 
     1. Check if the image clearly matches this complaint: "{complaint_text}".
-    2. Check if the image looks like a real photo, or if it looks AI-generated/fake.
+    2. Check if the is image looks like a real photo, or if it looks AI-generated/fake.
     3. Extract any readable text (OCR) from signs/buildings in the photo."""
     
     Output strictly JSON:
