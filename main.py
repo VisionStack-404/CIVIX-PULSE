@@ -25,7 +25,8 @@ load_dotenv(override=True)
 
 
 
-#telegram ,supabase,gqoq tokens#
+#telegram ,supabase,gqoq tokens and open source tokens that are limited
+#
 TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
