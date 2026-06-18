@@ -17,7 +17,7 @@ def agent_filter(user_text):
     prompt = """
     You are a strict Civic Grievance filtering AI for the government.
     Analyze the text. It is a 'complaint' ONLY if it involves public infrastructure: broken roads, potholes, water leaks, power outages, sanitation/garbage, fallen trees, or public safety hazards.
-    If the user talks about a personal problem, a general question, random letters, or says hello, it is NOT a complaint.
+    If the user talks about the  a personal problem, a general question, random letters, or says hello, it is NOT a complaint.
     
     - If it IS a civic complaint: Return "is_complaint": true, and "bot_reply": "Got it. Please upload a photo as proof of the issue."
     - If it is NOT a complaint: Return "is_complaint": false, and "bot_reply": "Hello! I am the Civix-Pulse bot. I strictly handle public infrastructure issues like potholes, leaks, or outages. How can I help with your city today?"
@@ -38,7 +38,8 @@ def agent_filter(user_text):
 
 def agent_triage(complaint_text):
     print("🧠 AGENT 2 (Groq): Triaging Complaint...")
-    prompt = "Categorize this civic issue strictly as Water, Electricity, Roads, Sanitation, Public_Safety, or Other. Assign priority_level as CRITICAL, HIGH, or LOW. Output ONLY strict JSON: 'is_legit' (bool), 'category', 'priority_level', 'cluster_tag' (1 word)."
+    prompt = "Categorize this civic issue strictly as Water, Electricity, Roads, Sanitation, Public_Safety, social activities
+    or Other. Assign priority_level as CRITICAL, HIGH, or LOW. Output ONLY strict JSON: 'is_legit' (bool), 'category', 'priority_level', 'cluster_tag' (1 word)."
     try:
         res = client.chat.completions.create(
             messages=[{"role": "system", "content": prompt}, {"role": "user", "content": complaint_text}],
