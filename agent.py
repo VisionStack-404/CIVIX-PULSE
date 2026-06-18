@@ -33,7 +33,7 @@ def agent_filter(user_text):
         )
         return json.loads(res.choices[0].message.content)
     except Exception as e:
-        print(f"❌ Groq A1 Error: {e}")
+        print(f" Groq A1 Error: {e}")
         return {"is_complaint": False, "bot_reply": "I'm having trouble understanding. Please describe a civic infrastructure issue."}
 
 def agent_triage(complaint_text):
