@@ -37,7 +37,7 @@ def agent_filter(user_text):
         return {"is_complaint": False, "bot_reply": "I'm having trouble understanding. Please describe a civic infrastructure issue."}
 
 def agent_triage(complaint_text):
-    print("🧠 AGENT 2 (Groq): Triaging Complaint...")
+    print("AGENT 2 (Groq): Triaging Complaint...")
     prompt = "Categorize this civic issue strictly as Water, Electricity, Roads, Sanitation, Public_Safety, social activities
     or Other. Assign priority_level as CRITICAL, HIGH, or LOW. Output ONLY strict JSON: 'is_legit' (bool), 'category', 'priority_level', 'cluster_tag' (1 word)."
     try:
