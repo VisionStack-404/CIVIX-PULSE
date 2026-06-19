@@ -60,5 +60,5 @@ def systemic_auditor(complaint_list):
         )
         return json.loads(res.choices[0].message.content)
     except Exception as e:
-        print(f"❌ Groq A3 Error: {e}")
+        print(f"Groq A3 Error: {e}")
         return {"root_cause_hypothesis": "Multiple recurring issues detected in this cluster."}
