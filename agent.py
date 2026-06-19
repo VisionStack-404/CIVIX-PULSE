@@ -51,7 +51,7 @@ def agent_triage(complaint_text):
         return {"is_legit": True, "category": "Other", "priority_level": "HIGH", "cluster_tag": "issue"}
 
 def systemic_auditor(complaint_list):
-    print("🧠 AGENT 3 (Groq): Running Systemic Audit...")
+    print(" AGENT 3 (Groq): Running Systemic Audit...")
     prompt = "You are a city infrastructure auditor. Determine the likely root cause of these similar issues in the same area. Output ONLY strict JSON with key: 'root_cause_hypothesis' (1-2 sentences)."
     try:
         res = client.chat.completions.create(
