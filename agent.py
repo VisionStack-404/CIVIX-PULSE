@@ -47,7 +47,7 @@ def agent_triage(complaint_text):
         )
         return json.loads(res.choices[0].message.content)
     except Exception as e:
-        print(f"❌ Groq A2 Error: {e}")
+        print(f" Groq A2 Error: {e}")
         return {"is_legit": True, "category": "Other", "priority_level": "HIGH", "cluster_tag": "issue"}
 
 def systemic_auditor(complaint_list):
