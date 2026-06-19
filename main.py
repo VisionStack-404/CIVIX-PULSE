@@ -152,7 +152,7 @@ async def agent_visual_auditor(image_bytes, complaint_text):
         return {"is_relevant": True, "is_real": True, "ocr_text": "None", "reason": "Bypassed due to API load."}
 
 # ==========================================
-# 🧠 GROQ AI AGENTS (Filters & ADVANCED TRIAGE)
+# GROQ AI AGENTS (Filters & ADVANCED TRIAGE)
 
 async def agent_filter(user_text):
     print(f"🧠 AGENT 1 (Groq): Filtering incoming text: '{user_text}'")
