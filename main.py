@@ -97,7 +97,7 @@ async def transcribe_voice(file_id):
         )
         return transcription.text
     except Exception as e:
-        print(f"❌ Whisper Error: {e}")
+        print(f"Whisper Error: {e}")
         return None
 
 
