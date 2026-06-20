@@ -104,7 +104,7 @@ async def transcribe_voice(file_id):
 
 
 async def agent_visual_auditor(image_bytes, complaint_text):
-    print("AGENT 4 (Groq Vision): Auditing Image Relevance & Authenticity...")
+    print("AGENT 4 (Groq Vision): Auditing Image Relevance and Authenticity...")
     
     try:
         img = Image.open(io.BytesIO(image_bytes))
