@@ -148,7 +148,7 @@ async def agent_visual_auditor(image_bytes, complaint_text):
         )
         return json.loads(chat_completion.choices[0].message.content)
     except Exception as e:
-        print(f"❌ Vision API Error: {e}")
+        print(f" Vision API Error: {e}")
         return {"is_relevant": True, "is_real": True, "ocr_text": "None", "reason": "Bypassed due to API load."}
 
 # ==========================================
