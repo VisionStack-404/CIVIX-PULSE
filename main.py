@@ -155,10 +155,10 @@ async def agent_visual_auditor(image_bytes, complaint_text):
 # GROQ AI AGENTS (Filters & ADVANCED TRIAGE)
 
 async def agent_filter(user_text):
-    print(f"🧠 AGENT 1 (Groq): Filtering incoming text: '{user_text}'")
+    print(f" AGENT 1 (Groq): Filtering incoming text: '{user_text}'")
     prompt = """
     You are a strict Civic Grievance filtering AI.
-    Analyze the text. It is a 'complaint' ONLY if it involves public infrastructure: broken roads, potholes, leaks, outages, sanitation, fallen trees, or safety hazards.
+    Analyze the text. It is a 'complaint' ONLY if it involves public infrastructure: broken roads, potholes, leaks, outages, sanitation, fallen trees, and safety hazards.
     If the user talks about a personal problem, says hello, or asks a generic question, it is NOT a complaint.
     
     Output ONLY strict JSON: {"is_complaint": bool, "bot_reply": "string"}
