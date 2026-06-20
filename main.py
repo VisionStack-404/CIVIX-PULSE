@@ -82,7 +82,7 @@ async def get_telegram_image_bytes(file_id):
 
 
 async def transcribe_voice(file_id):
-    print("🎤 Transcribing Audio via Groq Whisper...")
+    print(" Transcribing Audio via Groq Whisper...")
     res1 = await safe_request("GET", f"{TELEGRAM_API_URL}/getFile?file_id={file_id}")
     if not res1 or res1.status_code != 200: return None
     file_path = res1.json()['result']['file_path']
