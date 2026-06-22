@@ -171,7 +171,7 @@ async def agent_filter(user_text):
             timeout=10.0
         )
         result = json.loads(res.choices[0].message.content)
-        print(f"🧠 AGENT 1 (Groq) Result: {result}")
+        print(f" AGENT 1 (Groq) Result: {result}")
         return result
     except Exception as e:
         print(f"❌ Groq Filter Error: {e}")
