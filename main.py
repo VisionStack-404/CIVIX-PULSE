@@ -174,7 +174,7 @@ async def agent_filter(user_text):
         print(f" AGENT 1 (Groq) Result: {result}")
         return result
     except Exception as e:
-        print(f"❌ Groq Filter Error: {e}")
+        print(f" Groq Filter Error: {e}")
         return {"is_complaint": False, "bot_reply": "Please describe a civic infrastructure issue."}
 
 async def agent_triage(complaint_text, ocr_text=""):
