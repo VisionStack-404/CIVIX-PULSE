@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 api_key = os.getenv("GROQ_API_KEY")
-print(f"Testing Groq Key: {api_key[:12]}...")
+print(f" Testing the Groq Key: {api_key[:12]}...")
 
 try:
     client = Groq(api_key=api_key)
