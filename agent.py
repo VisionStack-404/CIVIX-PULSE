@@ -52,7 +52,7 @@ def agent_triage(complaint_text):
 
 def systemic_auditor(complaint_list):
     print(" AGENT 3 (Groq): Running Systemic Audit...")
-    prompt = "You are a city infrastructure of auditor. Determine the likely root cause of these similar issues in the same area. Output ONLY strict JSON with key: 'root_cause_hypothesis' (1-2 sentences)."
+    prompt = "You are a city infrastructure of auditor. Determine the likely root cause of the these similar issues in the same area. Output ONLY strict JSON with key: 'root_cause_hypothesis' (1-2 sentences)."
     try:
         res = client.chat.completions.create(
             messages=[{"role": "system", "content": prompt}, {"role": "user", "content": f"Analyze these complaints: {json.dumps(complaint_list)}"}],
