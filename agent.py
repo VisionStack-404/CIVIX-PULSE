@@ -28,7 +28,7 @@ def agent_filter(user_text):
         res = client.chat.completions.create(
             messages=[{"role": "system", "content": prompt}, {"role": "user", "content": user_text}],
             model=GROQ_MODEL, 
-            temperature=0.0, 
+            temperature=0.1, 
             response_format={"type": "json_object"}
         )
         return json.loads(res.choices[0].message.content)
