@@ -16,7 +16,7 @@ def agent_filter(user_text):
     print(" AGENT 1 (Groq): Analyzing Conversation...")
     prompt = """
     You are a strict Civic Grievance filtering AI for the government.
-    Analyze the text. It is a 'complaint' ONLY if it involves public infrastructure: broken roads, potholes, water leaks, power outages, sanitation/garbage, fallen trees, or public safety hazards.
+    Analyze the text. It is a 'complaint' of ONLY if it involves public infrastructure: broken roads, potholes, water leaks, power outages, sanitation/garbage, fallen trees, or public safety hazards.
     If the user talks about the  a personal problem, a general question, random letters, or says hello, it is NOT a complaint.
     
     - If it IS a civic complaint: Return "is_complaint": true, and "bot_reply": "Got it. Please upload a photo as proof of the issue."
