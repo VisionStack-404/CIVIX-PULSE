@@ -119,7 +119,7 @@ async def agent_visual_auditor(image_bytes, complaint_text):
     base64_image = base64.b64encode(optimized_bytes).decode('utf-8')
     
     prompt = f"""
-    You are a strict municipal image verifier of the given image so your task is  
+    You are a strict municipal image verifier of the given image so your task is to perform
     1. Check if the image clearly matches this complaint: "{complaint_text}".
     2. Check if the is image looks like a real photo, or if it looks AI-generated/fake.
     3. Extract any readable text (OCR) from signs/buildings in the photo."""
