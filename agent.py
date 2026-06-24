@@ -19,7 +19,7 @@ def agent_filter(user_text):
     Analyze the text. It is a 'complaint' of ONLY if it involves public infrastructure: broken roads, potholes, water leaks, power outages, sanitation/garbage, fallen trees, or public safety hazards.
     If the user talks about the  a personal problem, a general question, random letters, or says hello, it is NOT a complaint.
     
-    - If it IS a civic complaint: Return "is_complaint": true, and "bot_reply": "Got it. Please upload a photo as proof of the issue."
+    - If it IS a civic complaint: Return "is_complaint": true, and "bot_reply": "Got it. Please upload a photo as proof of the given issue."
     - If it is NOT a complaint: Return "is_complaint": false, and "bot_reply": "Hello! I am the Civix-Pulse bot. I strictly handle public infrastructure issues like potholes, leaks, or outages. How can I help with your city today?"
     
     Output ONLY strict JSON: {"is_complaint": bool, "bot_reply": "string"}
