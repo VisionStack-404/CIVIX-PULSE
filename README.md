@@ -196,8 +196,11 @@ npm run dev
 5. **Resolution:** The AI Triage Engine will calculate the priority, mathematically check for duplicates, and auto-dispatch the nearest available city worker. Workers can view tasks on the React portal and resolve them, triggering an automatic photographic broadcast back to the citizens.
 
 ---
-### 👨‍💻 Built By
-**Visionstack-404** 📧 varunvadlakonda4@gmail.com.
-**ScriptOrbit-132** 📧 srivarshiniyadav30@gmail.com.
+## 👨‍💻 Built By
+
+| Developer | Email |
+|------------|-------|
+| **VisionStack-404** | 📧 varunvadlakonda4@gmail.com |
+| **ScriptOrbit-132** | 📧 srivarshiniyadav30@gmail.com |
 
 *Built with ❤️ for a better, automated future. (SDG 9 & SDG 11)*
